@@ -16,7 +16,7 @@ The adverserial attacks that will be used are white-box attacks, meaning that th
 
 ### Setup
 
-&emsp;For this project, we will be utilizing the MNIST database (Modified National Institute of Standards and Technology database). This is a large database of 28 x 28 grayscale pixel handwritten images of numbers. The dataset contains 60,000 training images and 10,000 testing images. In their original paper, they achieve an error rate of 0.8% using a support vector machine (http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf). Although our feedforward neural network does not have to have accuracy comparable to the original research, it does ensure there are minimal upper bounds on the performance of the model due to the nature of the dataset.
+&emsp;For this project, we will be utilizing the MNIST database (Modified National Institute of Standards and Technology database). This is a large database of 28 x 28 grayscale pixel handwritten images of numbers. The dataset contains 60,000 training images and 10,000 testing images. In their original paper, they achieve an error rate of 0.8% using a support vector machine. Although our feedforward neural network does not have to have accuracy comparable to the original research, it does ensure there are minimal upper bounds on the performance of the model due to the nature of the dataset.
 
 ![image](https://user-images.githubusercontent.com/80783579/235015094-23583509-d380-4efe-a778-ed798e35efec.png)
 <br /><br />
@@ -47,3 +47,11 @@ The adverserial attacks that will be used are white-box attacks, meaning that th
 ### Conclusion
 
 &emsp;In this project, I have provided a benchmark for how a feedforward neural network implemented with PyTorch performs against two adversarial attacks (FGM and PGD) executed with the CleverHans Python library, and provided a way to utilize the CleverHans library to retrain the model to significantly improve its performance against these attacks. These results should not only allow data scientists to view the devastating effects of adversarial attacks, but also provide them a clear guideline to implementing these adversarial methods into their model training to produce more robust models. Not only is the original performance of the model recuperable after adversarial training, but it may leave your model with better accuracy and lower loss on the original training dataset.
+
+### References
+
+- [CleverHans GitHub repository](https://github.com/cleverhans-lab/cleverhans)
+- [MNIST Dataset reserach paper](https://ieeexplore.ieee.org/document/726791)
+- [Sidhant Haldar's Gradient-based Adversarial Attacks : An Introduction](https://medium.com/swlh/gradient-based-adversarial-attacks-an-introduction-526238660dc9)
+- [Tim Cheng's Adversarial Attack and Defense on Neural Networks in PyTorch](https://towardsdatascience.com/adversarial-attack-and-defense-on-neural-networks-in-pytorch-82b5bcd9171)
+- [Prof. Zhang's DS4400 Lecture Notes](http://www.hongyangzhang.com/DS4400_Spring2023.html)
